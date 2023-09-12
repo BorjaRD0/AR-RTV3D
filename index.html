@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content='width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=yes'>
-    <title>Unity WebGL Player | Presentación AR x RTV3D</title>
+    <title>Unity WebGL Player | AR RTV3D</title>
     <link rel="stylesheet" href="TemplateData/style.css">
     <style>
         html{
@@ -40,9 +40,7 @@
 		<imagetarget id='reel' src='targets/reel.png'></imagetarget>
 		<imagetarget id='rmn' src='targets/rmn.png'></imagetarget>
 		<imagetarget id='bear' src='targets/bear.png'></imagetarget>
-		<imagetarget id='Logo KE' src='targets/Logo KE.jpeg'></imagetarget>
-		<imagetarget id='Logo RTV3D completo' src='targets/Logo RTV3D completo.png'></imagetarget>
-		<imagetarget id='Logo RTV3D completo 1' src='targets/Logo RTV3D completo 1.png'></imagetarget>
+		<imagetarget id='Logo RTV3D solo logo' src='targets/Logo RTV3D solo logo.png'></imagetarget>
 
     <video id="webcam-video" muted autoplay playsinline style="width:1px;position:absolute"></video>
     <div id="startARDiv" class="ctaDiv">
@@ -99,7 +97,7 @@
         });;
         
     </script>
-    <script src="Build/Build RTV3D.loader.js"></script>
+    <script src="Build/Build.loader.js"></script>
     <script>
             var container = document.querySelector("#unity-container");
             var canvas = document.querySelector("#unity-canvas");
@@ -111,12 +109,12 @@
                 
                 document.getElementById("startARDiv").style.display = "none";
                 createUnityInstance(document.querySelector("#unity-canvas"), {
-                    dataUrl: "Build/Build RTV3D.data",
-                    frameworkUrl: "Build/Build RTV3D.framework.js",
-                    codeUrl: "Build/Build RTV3D.wasm",
+                    dataUrl: "Build/Build.data",
+                    frameworkUrl: "Build/Build.framework.js",
+                    codeUrl: "Build/Build.wasm",
                     streamingAssetsUrl: "StreamingAssets",
                     companyName: "DefaultCompany",
-                    productName: "Presentación AR x RTV3D",
+                    productName: "AR RTV3D",
                     productVersion: "0.1",
                     //webglContextAttributes: { "preserveDrawingBuffer": true },
                     // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
